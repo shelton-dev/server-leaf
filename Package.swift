@@ -11,12 +11,12 @@ let package = Package(
         .library(name: "Leaf", targets: ["Leaf"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/leaf-kit.git", from: "1.3.1"),
+        .package(path: "../Leaf-Kit"),
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
     ],
     targets: [
         .target(name: "Leaf", dependencies: [
-            .product(name: "LeafKit", package: "leaf-kit"),
+            .product(name: "LeafKit", package: "Leaf-Kit"),
             .product(name: "Vapor", package: "vapor"),
         ]),
         .testTarget(name: "LeafTests", dependencies: [
