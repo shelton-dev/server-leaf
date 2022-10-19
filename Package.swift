@@ -11,8 +11,8 @@ let package = Package(
         .library(name: "Leaf", targets: ["Leaf"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/shelton-dev/server-leaf-kit.git", from: "0.1.2"),
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
+        .package(url: "git@github.com:shelton-dev/server-leaf-kit.git", from: "0.1.2"),
+        .package(url: "git@github.com:vapor/vapor.git", from: "4.0.0"),
     ],
     targets: [
         .target(name: "Leaf", dependencies: [
