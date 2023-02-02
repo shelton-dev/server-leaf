@@ -11,12 +11,12 @@ let package = Package(
         .library(name: "Leaf", targets: ["Leaf"]),
     ],
     dependencies: [
-        .package(url: "git@github.com:shelton-dev/server-leaf-kit.git", from: "0.1.2"),
+        .package(path: "../Leaf-Kit"),
         .package(url: "git@github.com:vapor/vapor.git", from: "4.0.0"),
     ],
     targets: [
         .target(name: "Leaf", dependencies: [
-            .product(name: "LeafKit", package: "server-leaf-kit"),
+            .product(name: "leaf-kit", package: "Leaf-Kit"),
             .product(name: "Vapor", package: "vapor"),
         ]),
         .testTarget(name: "LeafTests", dependencies: [
